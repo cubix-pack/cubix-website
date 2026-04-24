@@ -12,21 +12,21 @@ interface DownloadBtn {
 
 const buttons: DownloadBtn[] = [
   {
-    icon: "download",
+    icon: "Window",
     label: "Windows",
-    bgClass: "bg-[#b02f00]",
+    bgClass: "bg-red-500",
     textClass: "text-white",
   },
   {
     icon: "android",
     label: "Android",
-    bgClass: "bg-[#006b5c]",
+    bgClass: "bg-teal-400",
     textClass: "text-white",
   },
   {
     icon: "browser_updated",
-    label: "Chrome",
-    bgClass: "bg-[#b78a00]",
+    label: "Chrome Extension",
+    bgClass: "bg-yellow-400",
     textClass: "text-black",
   },
 ];
@@ -35,13 +35,13 @@ const Hero: React.FC = () => {
   return (
     <header
       id="features"
-      className="relative grid grid-cols-1 lg:grid-cols-12 min-h-[680px] border-b-4 border-black overflow-hidden"
+      className="relative grid grid-cols-1 mt-4 lg:grid-cols-12 min-h-[680px] border-b-4 border-black overflow-hidden"
     >
       {/* Left Content */}
       <div className="lg:col-span-7 p-8 lg:px-16 lg:py-20 flex flex-col justify-center bg-white">
         <div className="mb-2">
           <span className="inline-block bg-black text-yellow-400 text-xs font-black uppercase tracking-widest px-3 py-1 mb-6">
-            Physical × Digital Sync
+            Physical x Digital Sync
           </span>
         </div>
         <h1 className="font-black uppercase leading-none tracking-tighter text-[clamp(40px,6vw,64px)] text-black mb-4">

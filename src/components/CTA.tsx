@@ -9,15 +9,14 @@ const CTA: React.FC = () => {
         </h2>
         <p className="text-[18px] font-medium leading-relaxed mb-16 text-[#dadada] max-w-2xl mx-auto">
           The digital world is designed to steal your attention. CUBIX is the
-          tool to take it back. Sync your platforms, flip the cube, and enter
-          the flow state.
+          tool to take it back. Flip the cube, and enter the flow state.
         </p>
 
-        <div className="inline-block border-4 border-white p-2">
+        {/* <div className="inline-block border-4 border-white p-2">
           <button className="bg-white text-black font-black text-2xl uppercase px-16 py-6 hover:bg-yellow-400 transition-colors tracking-tighter">
             Initialize SYNC
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

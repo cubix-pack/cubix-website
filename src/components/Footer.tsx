@@ -17,12 +17,6 @@ const Footer: React.FC = () => {
       <div className="flex flex-wrap justify-center gap-6">
         <a
           href="#"
-          className="font-black uppercase text-xs tracking-widest text-black underline decoration-4 hover:bg-black hover:text-white px-2 py-1 transition-colors duration-100"
-        >
-          Privacy
-        </a>
-        <a
-          href="#"
           className="font-black uppercase text-xs tracking-widest text-black hover:bg-black hover:text-white px-2 py-1 transition-colors duration-100"
         >
           Github

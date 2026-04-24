@@ -8,12 +8,28 @@ interface Contributor {
   patternStyle: React.CSSProperties;
   roleColor: string;
   iconColor: string;
+  linkedin: string;
 }
+
+// Team:
+/**
+ * 1- George Bahij: Mobile Dev / UI/UX
+ * 2- Karim Nader: Website Dev
+ * 3- Pierre Ehab: Database Design
+ * 4- George Ibrahim: UI/UX Design & Desktop Dev
+ * 5- Adham Mansour: Hardware Design
+ * 6- Ahmed Essam: Database Design & Dev
+ * 7- Hussien Mohammed: Desktop Dev
+ * 8- Mathiew Botros: Env Leaker
+ * 9- Hassan Eladl: Desktop Dev
+ * 10- Youssef Maged: Desktop Dev & Cube Design
+ * 11- Omar Nagy: Hardware Dev
+ */
 
 const contributors: Contributor[] = [
   {
-    name: "Jax Vorn",
-    role: "Lead Architect",
+    name: "George Bahij",
+    role: "Mobile Dev & UI/UX Design",
     icon: "code",
     headerBg: "bg-[#ff5722]",
     patternStyle: {
@@ -22,10 +38,11 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#b02f00]",
     iconColor: "text-white",
+    linkedin: "https://www.linkedin.com/in/george-bahij-1411831ba/",
   },
   {
-    name: "Mina Sato",
-    role: "Visual Terrorist",
+    name: "Karim Nader",
+    role: "Website Dev",
     icon: "brush",
     headerBg: "bg-[#68fadd]",
     patternStyle: {
@@ -34,32 +51,124 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#006b5c]",
     iconColor: "text-black",
+    linkedin: "",
   },
   {
-    name: "Rayn Kross",
-    role: "Mesh Security",
-    icon: "shield",
-    headerBg: "bg-[#ffdf9e]",
+    name: "Pierre Ehab",
+    role: "Database Design",
+    icon: "storage",
+    headerBg: "bg-[#ffeb3b]",
     patternStyle: {
       backgroundImage:
-        "radial-gradient(circle, rgba(0,0,0,0.1) 2px, transparent 2px)",
-      backgroundSize: "12px 12px",
+        "repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
     },
-    roleColor: "text-[#785900]",
-    iconColor: "text-[#5b4300]",
+    roleColor: "text-[#b38600]",
+    iconColor: "text-black",
+    linkedin: "",
   },
   {
-    name: "Echo Zero",
-    role: "Protocol Deviant",
-    icon: "terminal",
-    headerBg: "bg-[#ffdad6]",
+    name: "George Ibrahim",
+    role: "UI/UX Design & Desktop Dev",
+    icon: "desktop_windows",
+    headerBg: "bg-[#8bc34a]",
     patternStyle: {
       backgroundImage:
-        "linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)",
-      backgroundSize: "10px 10px",
+        "repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
     },
-    roleColor: "text-[#ba1a1a]",
-    iconColor: "text-[#ba1a1a]",
+    roleColor: "text-[#4b7c00]",
+    iconColor: "text-black",
+    linkedin: "",
+  },
+  {
+    name: "Adham Mansour",
+    role: "Hardware Design",
+    icon: "memory",
+    headerBg: "bg-[#e91e63]",
+    patternStyle: {
+      backgroundImage:
+        "repeating-linear-gradient(60deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+    },
+    roleColor: "text-[#9a0036]",
+    iconColor: "text-white",
+    linkedin: "",
+  },
+  {
+    name: "Ahmed Essam",
+    role: "Database Design & Dev",
+    icon: "storage",
+    headerBg: "bg-[#9c27b0]",
+    patternStyle: {
+      backgroundImage:
+        "repeating-linear-gradient(120deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+    },
+    roleColor: "text-[#6a0080]",
+    iconColor: "text-white",
+    linkedin: "",
+  },
+  {
+    name: "Hussien Mohamed",
+    role: "Desktop Dev",
+    icon: "desktop_windows",
+    headerBg: "bg-[#3f51b5]",
+    patternStyle: {
+      backgroundImage:
+        "repeating-linear-gradient(75deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+    },
+    roleColor: "text-[#001970]",
+    iconColor: "text-white",
+    linkedin: "",
+  },
+  {
+    name: "Mathiew Botros",
+    role: "Env Leaker",
+    icon: "public",
+    headerBg: "bg-[#00bcd4]",
+    patternStyle: {
+      backgroundImage:
+        "repeating-linear-gradient(15deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+    },
+    roleColor: "text-[#004d52]",
+    iconColor: "text-black",
+    linkedin: "",
+  },
+  {
+    name: "Hassan Eladl",
+    role: "Desktop Dev",
+    icon: "desktop_windows",
+    headerBg: "bg-[#cddc39]",
+    patternStyle: {
+      backgroundImage:
+        "repeating-linear-gradient(30deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+    },
+    roleColor: "text-[#697000]",
+    iconColor: "text-black",
+    linkedin: "",
+  },
+  {
+    name: "Youssef Maged",
+    role: "Desktop Dev & Cube Design",
+    icon: "desktop_windows",
+    headerBg: "bg-[#ff9800]",
+    patternStyle: {
+      backgroundImage:
+        "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+    },
+    roleColor: "text-[#b26a00]",
+    iconColor: "text-black",
+    linkedin: "",
+  },
+  {
+    name: "Omar Nagy",
+    role: "Hardware Dev",
+    icon: "memory",
+    headerBg: "bg-[#e91e63]",
+    patternStyle: {
+      backgroundImage:
+        "repeating-linear-gradient(60deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+    },
+    roleColor: "text-[#9a0036]",
+    iconColor: "text-white",
+    linkedin: "",
   },
 ];
 
@@ -71,13 +180,10 @@ const Team: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header row */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-12 gap-4">
           <h2 className="font-black text-[40px] uppercase tracking-tighter text-black leading-tight">
             Meet the Minds
           </h2>
-          <div className="bg-black text-white px-6 py-2 font-black uppercase text-xs tracking-widest border-2 border-black">
-            The Collective
-          </div>
         </div>
 
         {/* Grid */}
@@ -90,7 +196,7 @@ const Team: React.FC = () => {
             >
               {/* Card header */}
               <div
-                className={`h-48 ${c.headerBg} border-b-4 border-black relative overflow-hidden`}
+                className={`h-20 ${c.headerBg} border-b-4 border-black relative overflow-hidden`}
               >
                 <div className="absolute inset-0" style={c.patternStyle} />
                 <span
@@ -100,7 +206,6 @@ const Team: React.FC = () => {
                   {c.icon}
                 </span>
               </div>
-
               {/* Card body */}
               <div className="p-4">
                 <h4 className="font-black text-2xl uppercase leading-tight">
@@ -112,8 +217,9 @@ const Team: React.FC = () => {
                   {c.role}
                 </p>
                 <a
-                  href="#"
-                  className="inline-flex items-center gap-2 font-black text-xs bg-black text-white px-4 py-2 hover:bg-[#006b5c] transition-colors uppercase w-full justify-center border-2 border-black"
+                  target="_blank"
+                  href={c.linkedin}
+                  className="inline-flex items-center gap-2 font-black text-xs bg-black text-white px-4 py-2 hover:bg-teal-400 transition-colors uppercase w-full justify-center border-2 border-black"
                 >
                   LinkedIn{" "}
                   <span className="material-symbols-outlined text-sm">
