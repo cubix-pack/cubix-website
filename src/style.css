@@ -1,1 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
+
 @import "tailwindcss";
+
+:root {
+  --primary: #b02f00;
+  --primary-container: #ff5722;
+  --secondary: #006b5c;
+  --secondary-container: #68fadd;
+  --tertiary: #785900;
+  --tertiary-container: #b78a00;
+  --tertiary-fixed: #ffdf9e;
+  --tertiary-fixed-dim: #fabd00;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --surface: #f9f9f9;
+  --on-surface: #1b1b1b;
+  --on-surface-variant: #5b4039;
+  --surface-container: #eeeeee;
+  --surface-container-highest: #e2e2e2;
+  --inverse-surface: #303030;
+  --background: #f9f9f9;
+  --on-background: #1b1b1b;
+  --outline-variant: #e4beb4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+  color: var(--on-background);
+  overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  vertical-align: middle;
+  font-family: "Material Symbols Outlined";
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.neo-btn {
+  transition:
+    transform 0.075s ease,
+    box-shadow 0.075s ease;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.neo-btn:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.neo-btn:active {
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+}

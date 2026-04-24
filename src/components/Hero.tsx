@@ -1,0 +1,98 @@
+import React from "react";
+
+const CUBIX_IMG =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuD9QuS0atZeCU8iTDkhwgc24a1gt37LV1GxkYG1DhTZ-oDG4egfn8glbXyYpBimMOEWH9aAv7-3iFStASOjd9fvt0Gu6kw7M7bc5S5uxjAjsqg4b2Mb0NtmZeV-PL1kkvu21LNopYwr-APuDvKjht8R9Q04hDs_8yAQMNJDBnP4HZ57WogJ4-t_j0AAcygcbrbD99EptCLuai79yHyNQbeYJHZwikUXEmIEnQY7fFpAY87Djdi-IrWkJhqb-AMrgIuK1VzvZ-WZb-Ek";
+
+interface DownloadBtn {
+  icon: string;
+  label: string;
+  bgClass: string;
+  textClass: string;
+}
+
+const buttons: DownloadBtn[] = [
+  {
+    icon: "download",
+    label: "Windows",
+    bgClass: "bg-[#b02f00]",
+    textClass: "text-white",
+  },
+  {
+    icon: "android",
+    label: "Android",
+    bgClass: "bg-[#006b5c]",
+    textClass: "text-white",
+  },
+  {
+    icon: "browser_updated",
+    label: "Chrome",
+    bgClass: "bg-[#b78a00]",
+    textClass: "text-black",
+  },
+];
+
+const Hero: React.FC = () => {
+  return (
+    <header
+      id="features"
+      className="relative grid grid-cols-1 lg:grid-cols-12 min-h-[680px] border-b-4 border-black overflow-hidden"
+    >
+      {/* Left Content */}
+      <div className="lg:col-span-7 p-8 lg:px-16 lg:py-20 flex flex-col justify-center bg-white">
+        <div className="mb-2">
+          <span className="inline-block bg-black text-yellow-400 text-xs font-black uppercase tracking-widest px-3 py-1 mb-6">
+            Physical × Digital Sync
+          </span>
+        </div>
+        <h1 className="font-black uppercase leading-none tracking-tighter text-[clamp(40px,6vw,64px)] text-black mb-4">
+          THE CUBE IS THE{" "}
+          <span className="block">
+            Key{" "}
+            <span className="bg-[#ff5722] text-white px-2 inline-block">
+              LOCK IN.
+            </span>
+          </span>
+        </h1>
+        <p className="text-[18px] font-medium leading-relaxed mb-10 max-w-xl text-[#1b1b1b]">
+          Stop fighting your distractions and start dominating your workflow.
+          CUBIX syncs your physical environment with your digital space. One
+          flip, total silence, zero excuses.
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+          {buttons.map((btn) => (
+            <button
+              key={btn.label}
+              className={`neo-btn ${btn.bgClass} ${btn.textClass} border-4 border-black px-6 py-3 font-black text-base uppercase flex items-center gap-2`}
+            >
+              <span className="material-symbols-outlined text-xl">
+                {btn.icon}
+              </span>
+              {btn.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Right Image Panel */}
+      <div className="lg:col-span-5 bg-teal-400 border-l-4 border-black flex items-center justify-center relative p-8 overflow-hidden min-h-[400px]">
+        {/* Dot Pattern Background */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: "radial-gradient(#000 1px, transparent 1px)",
+            backgroundSize: "20px 20px",
+          }}
+        />
+        <img
+          src={CUBIX_IMG}
+          alt="Cubix Character - neo-brutalist cube robot"
+          className="relative z-10 w-full max-w-sm border-4 border-black rotate-2"
+          style={{ boxShadow: "8px 8px 0px 0px rgba(0,0,0,1)" }}
+        />
+      </div>
+    </header>
+  );
+};
+
+export default Hero;
