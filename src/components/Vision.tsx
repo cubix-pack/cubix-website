@@ -21,15 +21,15 @@ const steps: Step[] = [
   {
     num: "02",
     title: "CUSTOMIZE",
-    desc: "Your discipline, your rules. Map your 5 most critical focus modes to each face of the cube. Choose which apps live and which apps die during your sprint.",
+    desc: "Your discipline, your rules. Map your 5 most critical focus modes to each face of the cube. Choose which apps live and which apps die.",
     icon: "fingerprint",
     bg: "bg-teal-400",
-    titleColor: "text-[#006b5c]",
+    titleColor: "text-black",
   },
   {
     num: "03",
     title: "EXECUTE",
-    desc: "Harness the power of tactile Pomodoro. Flipping the cube isn't just a gesture; it's a commitment to the deep work phase. No more toggling menus.",
+    desc: "No need to navigate menus and tabs just to be productive. One flip of the cube and you will reclaim your productivity",
     icon: "hub",
     bg: "bg-yellow-400",
     titleColor: "text-black",
