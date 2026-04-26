@@ -25,6 +25,7 @@ interface Contributor {
  * 9- Hassan Eladl: Desktop Dev
  * 10- Youssef Maged: Desktop Dev & Cube Design
  * 11- Omar Nagy: Hardware Dev
+ * 12- Michael Gamaml: Cube Design
  */
 
 const contributors: Contributor[] = [
@@ -52,7 +53,8 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#006b5c]",
     iconColor: "text-black",
-    linkedin: "",
+    linkedin:
+      "https://www.linkedin.com/in/karim-nader-735958365?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
   {
     name: "Pierre Ehab",
@@ -65,7 +67,7 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#b38600]",
     iconColor: "text-black",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/pierre-ehab-74531b2b4/",
   },
   {
     name: "George Ibrahim",
@@ -78,7 +80,7 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#4b7c00]",
     iconColor: "text-black",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/georgeibrahim1/",
   },
   {
     name: "Adham Mansour",
@@ -91,7 +93,7 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#9a0036]",
     iconColor: "text-white",
-    linkedin: "",
+    linkedin: "www.linkedin.com/in/adham-mansour-b0737437b",
   },
   {
     name: "Ahmed Essam",
@@ -104,7 +106,7 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#6a0080]",
     iconColor: "text-white",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/ahmed-essam-afefe-3b00b2334/",
   },
   {
     name: "Hussien Mohamed",
@@ -117,11 +119,11 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#001970]",
     iconColor: "text-white",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/hussein-elbehery-05500a331/",
   },
   {
-    name: "Mathiew Botros",
-    role: "Env Leaker",
+    name: "Mathieu Morcos",
+    role: "Database dev",
     icon: "public",
     headerBg: "bg-[#00bcd4]",
     patternStyle: {
@@ -130,7 +132,8 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#004d52]",
     iconColor: "text-black",
-    linkedin: "",
+    linkedin:
+      "https://www.linkedin.com/in/mathieu-morcos-1342a1206?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   },
   {
     name: "Hassan Eladl",
@@ -143,7 +146,7 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#697000]",
     iconColor: "text-black",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/hassan-eladl/",
   },
   {
     name: "Youssef Maged",
@@ -156,7 +159,8 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#b26a00]",
     iconColor: "text-black",
-    linkedin: "",
+    linkedin:
+      "https://www.linkedin.com/in/youssef-maged-27196031b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
   {
     name: "Omar Nagy",
@@ -169,8 +173,22 @@ const contributors: Contributor[] = [
     },
     roleColor: "text-[#9a0036]",
     iconColor: "text-white",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/omar-nagy-b559ab374/",
   },
+  // {
+  //   name: "Michael Gamal",
+  //   role: "Cube Design",
+  //   icon: "widgets",
+  //   headerBg: "bg-[#4caf50]",
+  //   patternStyle: {
+  //     backgroundImage:
+  //       "repeating-linear-gradient(105deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 20px)",
+  //   },
+  //   roleColor: "text-[#256500]",
+  //   iconColor: "text-black",
+  //   linkedin:
+  //     "https://www.linkedin.com/in/micheal-gamal-b96a33259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  // },
 ];
 
 const Team: React.FC = () => {
