@@ -5,15 +5,17 @@ import Vision from "./components/Vision";
 import Team from "./components/Team";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import OurStory from "./components/OurStory";
 
 const App: React.FC = () => {
   return (
-    <div className="bg-[#f9f9f9] text-[#1b1b1b] font-sans overflow-x-hidden scroll-smooth">
+    <div className="bg-[#f9f9f9] text-[#1b1b1b] font-sans overflow-x-hidden">
       <NavBar />
       <Hero />
       <Vision />
+      <OurStory />
       <Team />
-      <CTA />
+      {/*<CTA />*/}
       <Footer />
     </div>
   );

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../public/cubix_logo_cropped.svg";
 
-const navLinks = ["Features", "Vision", "Team", "Download"];
+const navLinks = ["Download", "Vision", "Our story", "Team"];
 
 const NavBar: React.FC = () => {
-  const [active, setActive] = useState("features");
+  const [active, setActive] = useState("Download");
 
   useEffect(() => {
     const sections = navLinks.map((link) =>

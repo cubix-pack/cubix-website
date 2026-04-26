@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface Step {
   num: string;
@@ -49,10 +50,14 @@ const Vision: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {steps.map((step) => (
-            <div
+            <motion.div
               key={step.num}
               className={`${step.bg} border-4 border-black p-6 flex flex-col gap-3`}
               style={{ boxShadow: "4px 4px 0px 0px rgba(0,0,0,1)" }}
+              initial={{ scale: 0.95, opacity: 0.9 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
             >
               {/* Number badge */}
               <div className="bg-black text-white w-12 h-12 flex items-center justify-center font-black text-2xl leading-none">
@@ -72,7 +77,7 @@ const Vision: React.FC = () => {
               <span className="material-symbols-outlined text-6xl mt-auto self-end opacity-80">
                 {step.icon}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

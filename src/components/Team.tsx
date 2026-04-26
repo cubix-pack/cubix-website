@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface Contributor {
   name: string;
@@ -189,10 +190,14 @@ const Team: React.FC = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {contributors.map((c) => (
-            <div
+            <motion.div
               key={c.name}
               className="border-4 border-black bg-white overflow-hidden"
               style={{ boxShadow: "4px 4px 0px 0px rgba(0,0,0,1)" }}
+              initial={{ scale: 0.95, opacity: 0.9 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
             >
               {/* Card header */}
               <div
@@ -227,7 +232,7 @@ const Team: React.FC = () => {
                   </span>
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const CTA: React.FC = () => {
   return (
-    <section id="download" className="py-20 px-8 bg-black text-white">
+    <section className="py-20 px-8 bg-black text-white">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="font-black uppercase italic tracking-tighter text-[clamp(40px,7vw,80px)] leading-none mb-6">
           READY TO FOCUS?

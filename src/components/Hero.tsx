@@ -1,7 +1,6 @@
 import React from "react";
-
-const CUBIX_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuD9QuS0atZeCU8iTDkhwgc24a1gt37LV1GxkYG1DhTZ-oDG4egfn8glbXyYpBimMOEWH9aAv7-3iFStASOjd9fvt0Gu6kw7M7bc5S5uxjAjsqg4b2Mb0NtmZeV-PL1kkvu21LNopYwr-APuDvKjht8R9Q04hDs_8yAQMNJDBnP4HZ57WogJ4-t_j0AAcygcbrbD99EptCLuai79yHyNQbeYJHZwikUXEmIEnQY7fFpAY87Djdi-IrWkJhqb-AMrgIuK1VzvZ-WZb-Ek";
+import { motion } from "framer-motion";
+import CUBIX_IMG from "../../public/cube.jpeg";
 
 interface DownloadBtn {
   icon: string;
@@ -34,7 +33,7 @@ const buttons: DownloadBtn[] = [
 const Hero: React.FC = () => {
   return (
     <header
-      id="features"
+      id="download"
       className="relative grid grid-cols-1 mt-4 lg:grid-cols-12 min-h-[680px] border-b-4 border-black overflow-hidden"
     >
       {/* Left Content */}
@@ -61,15 +60,19 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-wrap gap-4">
           {buttons.map((btn) => (
-            <button
+            <motion.button
               key={btn.label}
               className={`neo-btn ${btn.bgClass} ${btn.textClass} border-4 border-black px-6 py-3 font-black text-base uppercase flex items-center gap-2`}
+              initial={{ scale: 0.95, opacity: 0.9 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: false, amount: 0.35 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
             >
               <span className="material-symbols-outlined text-xl">
                 {btn.icon}
               </span>
               {btn.label}
-            </button>
+            </motion.button>
           ))}
         </div>
       </div>
