@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CUBIX_IMG from "../../public/cube.jpeg";
+import { ToastContainer, toast, type ToastContentProps } from "react-toastify";
 
 interface DownloadBtn {
   icon: string;
@@ -30,7 +31,25 @@ const buttons: DownloadBtn[] = [
   },
 ];
 
+function CustomToast({ closeToast }: ToastContentProps) {
+  return (
+    <div onClick={() => closeToast()}>
+      <p className="font-bold text-black text-sm p-4">
+        Sorry, build versions still not available
+      </p>
+    </div>
+  );
+}
+
 const Hero: React.FC = () => {
+  const notify = () =>
+    toast(CustomToast, {
+      autoClose: 3000,
+      closeButton: false,
+      hideProgressBar: true,
+      className: "p-0 border-4 border-black cursor-pointer h-[50px]",
+    });
+
   return (
     <header
       id="download"
@@ -67,6 +86,7 @@ const Hero: React.FC = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: false, amount: 0.35 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
+              onClick={notify}
             >
               <span className="material-symbols-outlined text-xl">
                 {btn.icon}
@@ -74,6 +94,7 @@ const Hero: React.FC = () => {
               {btn.label}
             </motion.button>
           ))}
+          <ToastContainer theme="colored" />
         </div>
       </div>
 
