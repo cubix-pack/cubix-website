@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Vision from "./components/Vision";
 import Team from "./components/Team";
-import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import OurStory from "./components/OurStory";
 

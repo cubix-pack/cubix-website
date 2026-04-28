@@ -39,6 +39,9 @@ const cards: StoryCard[] = [
 ];
 
 // Card scale-in animation variant
+// Cubic-bezier easing function (easeOut effect)
+const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
+
 const cardVariants = {
   hidden: {
     opacity: 0,
@@ -52,7 +55,7 @@ const cardVariants = {
     transition: {
       delay,
       duration: 0.52,
-      ease: [0.22, 1, 0.36, 1], // custom spring-like ease
+      ease: easeOut,
     },
   }),
 };
@@ -67,12 +70,14 @@ const textContainerVariants = {
   },
 };
 
+const easeInOut = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
 const textItemVariants = {
-  hidden: { opacity: 0, x: -24 },
+  hidden: { opacity: 0, x: -20 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.5, ease: easeInOut },
   },
 };
 
