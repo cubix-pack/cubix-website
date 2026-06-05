@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import logo from "../../public/cubix_logo_cropped.svg";
 
-const navLinks = ["Download", "Vision", "Our story", "Team"];
+const navLinks = [
+  { label: "Download", id: "download" },
+  { label: "Vision", id: "vision" },
+  { label: "How It Works", id: "how-it-works" },
+  { label: "Team", id: "team" },
+];
 
 const NavBar: React.FC = () => {
-  const [active, setActive] = useState("Download");
+  const [active, setActive] = useState("download");
+  const location = useLocation();
 
   useEffect(() => {
+    if (location.pathname === "/about") {
+      // On About page, don't track active section
+      setActive("");
+      return;
+    }
+
     const sections = navLinks.map((link) =>
-      document.getElementById(link.toLowerCase()),
+      document.getElementById(link.id),
     );
 
     const observer = new IntersectionObserver(
@@ -21,7 +34,7 @@ const NavBar: React.FC = () => {
       },
       {
         threshold: 0.6,
-        rootMargin: "-80px 0px 0px 0px", // adjust based on navbar height
+        rootMargin: "-80px 0px 0px 0px",
       },
     );
 
@@ -30,7 +43,7 @@ const NavBar: React.FC = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
 
   return (
     <nav
@@ -45,29 +58,22 @@ const NavBar: React.FC = () => {
       {/* Nav Links */}
       <div className="hidden md:flex gap-8">
         {navLinks.map((link) => {
-          const id = link.toLowerCase();
-
           return (
             <a
-              key={link}
-              href={`#${id}`}
+              key={link.label}
+              href={`#${link.id}`}
               className={`font-black uppercase tracking-tighter text-sm px-2 py-1 transition-all duration-75
               ${
-                active === id
+                active === link.id
                   ? "border-b-4 border-black text-black"
                   : "opacity-80 text-black"
               }`}
             >
-              {link}
+              {link.label}
             </a>
           );
         })}
       </div>
-
-      {/* CTA */}
-      <button className="bg-black text-white font-black uppercase tracking-tighter text-sm px-6 py-2 border-2 border-black hover:bg-yellow-400 hover:text-black transition-all active:translate-x-px active:translate-y-px">
-        Get Started
-      </button>
     </nav>
   );
 };

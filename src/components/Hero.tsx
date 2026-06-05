@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CUBIX_IMG from "../../public/cube.jpeg";
-import { ToastContainer, toast, type ToastContentProps } from "react-toastify";
 
 interface DownloadBtn {
   icon: string;
   label: string;
   bgClass: string;
   textClass: string;
+  href: string;
 }
 
 const buttons: DownloadBtn[] = [
@@ -16,39 +16,26 @@ const buttons: DownloadBtn[] = [
     label: "Windows",
     bgClass: "bg-red-500",
     textClass: "text-white",
+    href: "https://github.com/cubix-pack/cubix-desktop/releases",
   },
   {
     icon: "android",
     label: "Android",
     bgClass: "bg-teal-400",
     textClass: "text-white",
+    href: "https://github.com/cubix-pack/cubix-mobile/releases",
   },
   {
     icon: "browser_updated",
     label: "Chrome Extension",
     bgClass: "bg-yellow-400",
     textClass: "text-black",
+    href: "https://github.com/cubix-pack/cubix-web-extension/releases",
   },
 ];
 
-function CustomToast({ closeToast }: ToastContentProps) {
-  return (
-    <div onClick={() => closeToast()}>
-      <p className="font-bold text-black text-sm p-4">
-        Sorry, build versions still not available
-      </p>
-    </div>
-  );
-}
 
 const Hero: React.FC = () => {
-  const notify = () =>
-    toast(CustomToast, {
-      autoClose: 3000,
-      closeButton: false,
-      hideProgressBar: true,
-      className: "p-0 border-4 border-black cursor-pointer h-[50px]",
-    });
 
   return (
     <header
@@ -79,22 +66,23 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-wrap gap-4">
           {buttons.map((btn) => (
-            <motion.button
+            <motion.a
               key={btn.label}
-              className={`neo-btn ${btn.bgClass} ${btn.textClass} border-4 border-black px-6 py-3 font-black text-base uppercase flex items-center gap-2`}
+              href={btn.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`neo-btn ${btn.bgClass} ${btn.textClass} border-4 border-black px-6 py-3 font-black text-base uppercase flex items-center gap-2 no-underline`}
               initial={{ scale: 0.95, opacity: 0.9 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: false, amount: 0.35 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
-              onClick={notify}
             >
               <span className="material-symbols-outlined text-xl">
                 {btn.icon}
               </span>
               {btn.label}
-            </motion.button>
+            </motion.a>
           ))}
-          <ToastContainer theme="colored" />
         </div>
       </div>
 
